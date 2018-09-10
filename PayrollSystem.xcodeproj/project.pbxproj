@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B31651F21472ED000A86537 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B31651E21472ED000A86537 /* Vehicle.swift */; };
+		2B31652121472EE100A86537 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B31652021472EE100A86537 /* Car.swift */; };
+		2B31652321472EF000A86537 /* Motorcycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B31652221472EF000A86537 /* Motorcycle.swift */; };
+		2B31652621472F7C00A86537 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B31652521472F7C00A86537 /* Employee.swift */; };
+		2B31652821472F9000A86537 /* PartTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B31652721472F9000A86537 /* PartTime.swift */; };
+		2B31652A21472FC900A86537 /* FullTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B31652921472FC900A86537 /* FullTime.swift */; };
+		2B31652C21472FEA00A86537 /* Intern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B31652B21472FEA00A86537 /* Intern.swift */; };
+		2B31652E21472FFE00A86537 /* CommissionBasedPartTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B31652D21472FFE00A86537 /* CommissionBasedPartTime.swift */; };
+		2B3165302147300D00A86537 /* FixedBasedPartTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B31652F2147300D00A86537 /* FixedBasedPartTime.swift */; };
 		966D8195214729DD00C1480F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D8194214729DD00C1480F /* main.swift */; };
 		966D819E21472B7500C1480F /* JSONUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D819D21472B7500C1480F /* JSONUtility.swift */; };
-		966D81A021472C2D00C1480F /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D819F21472C2D00C1480F /* Vehicle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +33,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2B31651E21472ED000A86537 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		2B31652021472EE100A86537 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		2B31652221472EF000A86537 /* Motorcycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motorcycle.swift; sourceTree = "<group>"; };
+		2B31652521472F7C00A86537 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		2B31652721472F9000A86537 /* PartTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTime.swift; sourceTree = "<group>"; };
+		2B31652921472FC900A86537 /* FullTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTime.swift; sourceTree = "<group>"; };
+		2B31652B21472FEA00A86537 /* Intern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intern.swift; sourceTree = "<group>"; };
+		2B31652D21472FFE00A86537 /* CommissionBasedPartTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommissionBasedPartTime.swift; sourceTree = "<group>"; };
+		2B31652F2147300D00A86537 /* FixedBasedPartTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedBasedPartTime.swift; sourceTree = "<group>"; };
 		966D8191214729DD00C1480F /* PayrollSystem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PayrollSystem; sourceTree = BUILT_PRODUCTS_DIR; };
 		966D8194214729DD00C1480F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		966D819D21472B7500C1480F /* JSONUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUtility.swift; sourceTree = "<group>"; };
-		966D819F21472C2D00C1480F /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +58,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B31651D21472E7900A86537 /* vehicle */ = {
+			isa = PBXGroup;
+			children = (
+				2B31651E21472ED000A86537 /* Vehicle.swift */,
+				2B31652021472EE100A86537 /* Car.swift */,
+				2B31652221472EF000A86537 /* Motorcycle.swift */,
+			);
+			path = vehicle;
+			sourceTree = "<group>";
+		};
+		2B31652421472F5400A86537 /* employee */ = {
+			isa = PBXGroup;
+			children = (
+				2B31652521472F7C00A86537 /* Employee.swift */,
+				2B31652721472F9000A86537 /* PartTime.swift */,
+				2B31652921472FC900A86537 /* FullTime.swift */,
+				2B31652B21472FEA00A86537 /* Intern.swift */,
+				2B31652D21472FFE00A86537 /* CommissionBasedPartTime.swift */,
+				2B31652F2147300D00A86537 /* FixedBasedPartTime.swift */,
+			);
+			path = employee;
+			sourceTree = "<group>";
+		};
 		966D8188214729DD00C1480F = {
 			isa = PBXGroup;
 			children = (
@@ -71,7 +110,8 @@
 		966D819B21472B5100C1480F /* model */ = {
 			isa = PBXGroup;
 			children = (
-				966D819F21472C2D00C1480F /* Vehicle.swift */,
+				2B31652421472F5400A86537 /* employee */,
+				2B31651D21472E7900A86537 /* vehicle */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -141,8 +181,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				966D81A021472C2D00C1480F /* Vehicle.swift in Sources */,
+				2B31651F21472ED000A86537 /* Vehicle.swift in Sources */,
+				2B31652C21472FEA00A86537 /* Intern.swift in Sources */,
+				2B31652621472F7C00A86537 /* Employee.swift in Sources */,
+				2B31652321472EF000A86537 /* Motorcycle.swift in Sources */,
+				2B31652A21472FC900A86537 /* FullTime.swift in Sources */,
+				2B3165302147300D00A86537 /* FixedBasedPartTime.swift in Sources */,
+				2B31652821472F9000A86537 /* PartTime.swift in Sources */,
+				2B31652E21472FFE00A86537 /* CommissionBasedPartTime.swift in Sources */,
 				966D819E21472B7500C1480F /* JSONUtility.swift in Sources */,
+				2B31652121472EE100A86537 /* Car.swift in Sources */,
 				966D8195214729DD00C1480F /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
