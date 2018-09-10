@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class Motorcycle: Vehicle {
+    
+    var hasBasket = false
+    
+}

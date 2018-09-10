@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class Car: Vehicle {
+    
+    var numberOfSeats = 5
+
+}
