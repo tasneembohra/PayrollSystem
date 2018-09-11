@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class Intern: Employee {
+    
+    var schoolName: String
+    
+}

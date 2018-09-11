@@ -8,20 +8,14 @@
 
 import Foundation
 
-class Vehicle {
+protocol Vehicle {
     
-    var brand: String
-    var yearOfProduction: Int
-    var engineType: String
-    var color: String
-    var registrationNumber: String
+    var brand: String {get set}
+    var yearOfProduction: Int {get set}
+    var engineType: String {get set}
+    var color: String {get set}
+    var registrationNumber: String {get set}
     
-    init(brand: String, yearOfProduction: Int, engineType: String, color: String, registrationNumber: String) {
-        self.brand = String()
-        self.yearOfProduction = 0
-        self.engineType = String()
-        self.color = String()
-        self.registrationNumber = String()
-    }
-    
+
 }
+
