@@ -18,6 +18,7 @@
 		2B3165302147300D00A86537 /* FixedBasedPartTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B31652F2147300D00A86537 /* FixedBasedPartTime.swift */; };
 		966D8195214729DD00C1480F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D8194214729DD00C1480F /* main.swift */; };
 		966D819E21472B7500C1480F /* JSONUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D819D21472B7500C1480F /* JSONUtility.swift */; };
+		966D81A421474E2A00C1480F /* IPrintable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D81A321474E2A00C1480F /* IPrintable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,7 @@
 		966D8191214729DD00C1480F /* PayrollSystem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PayrollSystem; sourceTree = BUILT_PRODUCTS_DIR; };
 		966D8194214729DD00C1480F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		966D819D21472B7500C1480F /* JSONUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUtility.swift; sourceTree = "<group>"; };
+		966D81A321474E2A00C1480F /* IPrintable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPrintable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			children = (
 				2B31652421472F5400A86537 /* employee */,
 				2B31651D21472E7900A86537 /* vehicle */,
+				966D81A321474E2A00C1480F /* IPrintable.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				2B31652821472F9000A86537 /* PartTime.swift in Sources */,
 				2B31652E21472FFE00A86537 /* CommissionBasedPartTime.swift in Sources */,
 				966D819E21472B7500C1480F /* JSONUtility.swift in Sources */,
+				966D81A421474E2A00C1480F /* IPrintable.swift in Sources */,
 				2B31652121472EE100A86537 /* Car.swift in Sources */,
 				966D8195214729DD00C1480F /* main.swift in Sources */,
 			);

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Motorcycle: Vehicle {
+class Motorcycle: Vehicle, IPrintable {
     
     var brand: String
     var yearOfProduction: Int
@@ -27,7 +27,7 @@ class Motorcycle: Vehicle {
     }
     
     func display() {
-        print("Employee has a motor")
+        print("Employee has a motorcycle")
     }
     
 }

@@ -15,7 +15,5 @@ protocol Vehicle {
     var engineType: String {get set}
     var color: String {get set}
     var registrationNumber: String {get set}
-    
-
 }
 
