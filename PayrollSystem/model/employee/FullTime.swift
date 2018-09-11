@@ -31,7 +31,9 @@ class FullTime: Employee, IPrintable {
     }
     
     func calcBirthYear(age: Int) -> Int {
-        return 2019 - age
+        let date = Date()
+        let year = Calendar.current.component(.year, from: date)
+        return year - age
     }
     
 }

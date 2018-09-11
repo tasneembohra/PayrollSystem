@@ -28,10 +28,12 @@ class FixedBasedPartTime: PartTime, Employee, IPrintable {
     }
     
     func calcEarning() -> Double {
-        return (rate * hoursWorked) + fixedAmount
+        return (rate * hoursWorked) + Double(fixedAmmount)
     }
     
     func calcBirthYear(age: Int) -> Int {
-        return 2019 - age
+        let date = Date()
+        let year = Calendar.current.component(.year, from: date)
+        return year - age
     }
 }
