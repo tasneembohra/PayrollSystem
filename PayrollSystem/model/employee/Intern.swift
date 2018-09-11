@@ -25,7 +25,7 @@ class Intern: Employee, IPrintable {
     }
     
     func calcEarning() -> Double {
-        return 0.0 // right?
+        return 1000.0 // right?
     }
     
     func calcBirthYear(age: Int) -> Int {
