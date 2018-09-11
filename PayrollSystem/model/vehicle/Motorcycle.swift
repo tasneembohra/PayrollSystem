@@ -9,7 +9,7 @@
 import Foundation
 
 class Motorcycle: Vehicle, IPrintable {
-    
+
     var brand: String
     var yearOfProduction: Int
     var engineType: String
@@ -26,8 +26,8 @@ class Motorcycle: Vehicle, IPrintable {
         self.registrationNumber = registrationNumber
     }
     
-    func display() {
-        print("Employee has a motorcycle")
+    func printMyData() -> String {
+        <#code#>
     }
     
 }

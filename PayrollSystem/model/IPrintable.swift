@@ -9,5 +9,5 @@
 import Foundation
 
 protocol IPrintable {
-    func display()
+    func printMyData() -> String
 }
