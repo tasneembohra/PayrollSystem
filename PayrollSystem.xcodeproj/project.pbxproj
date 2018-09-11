@@ -73,14 +73,22 @@
 		2B31652421472F5400A86537 /* employee */ = {
 			isa = PBXGroup;
 			children = (
+				2B93A478214846F30068A32D /* PartTime */,
 				2B31652521472F7C00A86537 /* Employee.swift */,
-				2B31652721472F9000A86537 /* PartTime.swift */,
 				2B31652921472FC900A86537 /* FullTime.swift */,
 				2B31652B21472FEA00A86537 /* Intern.swift */,
+			);
+			path = employee;
+			sourceTree = "<group>";
+		};
+		2B93A478214846F30068A32D /* PartTime */ = {
+			isa = PBXGroup;
+			children = (
+				2B31652721472F9000A86537 /* PartTime.swift */,
 				2B31652D21472FFE00A86537 /* CommissionBasedPartTime.swift */,
 				2B31652F2147300D00A86537 /* FixedBasedPartTime.swift */,
 			);
-			path = employee;
+			path = PartTime;
 			sourceTree = "<group>";
 		};
 		966D8188214729DD00C1480F = {

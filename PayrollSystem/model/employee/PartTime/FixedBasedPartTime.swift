@@ -1,5 +1,5 @@
 //
-//  Intern.swift
+//  FixedBasedPartTime.swift
 //  PayrollSystem
 //
 //  Created by Daian Aiziatov on 10/09/2018.
@@ -8,16 +8,19 @@
 
 import Foundation
 
-class Intern: Employee, IPrintable {
-    
+class FixedBasedPartTime: PartTime, Employee, IPrintable {
     var name: String
     var age: Int
-    private var schoolName: String
+    var rate: Double
+    var hoursWorked: Double
+    private var fixedAmmount: Int
     
-    init(name: String, age: Int, schoolName: String) {
+    init(name: String, age: Int, rate: Double, hoursWorked: Double, fixedAmmount: Int){
         self.name = name
         self.age = age
-        self.schoolName = schoolName
+        self.rate = rate
+        self.hoursWorked = hoursWorked
+        self.fixedAmmount = fixedAmmount
     }
     
     func printMyData() -> String {
@@ -25,11 +28,10 @@ class Intern: Employee, IPrintable {
     }
     
     func calcEarning() -> Double {
-        return 0.0 // right?
+        return (rate * hoursWorked) + fixedAmount
     }
     
     func calcBirthYear(age: Int) -> Int {
         return 2019 - age
     }
-    
 }

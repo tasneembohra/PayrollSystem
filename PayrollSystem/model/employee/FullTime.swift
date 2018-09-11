@@ -7,3 +7,31 @@
 //
 
 import Foundation
+
+class FullTime: Employee, IPrintable {
+    
+    var name: String
+    var age: Int
+    private var salary: Double
+    private var bonus: Double
+    
+    init(name: String, age: Int, salary: Double, bonus: Double) {
+        self.name = name
+        self.age = age
+        self.salary = salary
+        self.bonus = bonus
+    }
+    
+    func printMyData() -> String {
+        
+    }
+    
+    func calcEarning() -> Double {
+        return salary + bonus
+    }
+    
+    func calcBirthYear(age: Int) -> Int {
+        return 2019 - age
+    }
+    
+}

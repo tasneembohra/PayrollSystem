@@ -1,5 +1,5 @@
 //
-//  FixedBasedPartTime.swift
+//  PartTime.swift
 //  PayrollSystem
 //
 //  Created by Daian Aiziatov on 10/09/2018.
@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+protocol PartTime: Employee {
+    
+    var rate: Double {get set}
+    var hoursWorked: Double {get set}
+    
+}
