@@ -41,5 +41,24 @@
   "hours_worked" : "10",
   "commision" : "40"
   }
+  },
+  {
+  "name": "Cindy2",
+  "birth_year": 1996,
+  "vehicle":
+  [
+   {
+   "type" : "motorcycle",
+   "model" : "XYZ",
+   "color" : "black",
+   "registration_no" : "CF123W",
+   "stroller": true
+   }
+   ],
+  "employement" : {
+  "type" : "intern",
+  "earning": 10000,
+  "school_name": "Lamton"
+  }
   }
   ]

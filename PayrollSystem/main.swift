@@ -9,3 +9,4 @@
 import Foundation
 
 JSONUtility.readEmplyeeData(fromFile: "employees")
+FileUtility.printObjectToFile()
