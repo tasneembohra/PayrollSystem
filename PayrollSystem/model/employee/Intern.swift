@@ -13,11 +13,13 @@ class Intern: Employee, IPrintable {
     var name: String
     var age: Int
     private var schoolName: String
+    private var internSalary: Double
     
-    init(name: String, age: Int, schoolName: String) {
+    init(name: String, age: Int, schoolName: String, internSalary: Double) {
         self.name = name
         self.age = age
         self.schoolName = schoolName
+        self.internSalary = internSalary
     }
     
     func printMyData() -> String {
@@ -25,7 +27,7 @@ class Intern: Employee, IPrintable {
     }
     
     func calcEarning() -> Double {
-        return 1000.0 // right?
+        return internSalary
     }
     
     func calcBirthYear(age: Int) -> Int {
