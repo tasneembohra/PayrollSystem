@@ -8,16 +8,11 @@
 
 import Foundation
 
-class Intern: Employee, IPrintable {
-    
-    var name: String
-    var age: Int
+class Intern: EmployeementDetail {
     private var schoolName: String
     private var internSalary: Double
     
-    init(name: String, age: Int, schoolName: String, internSalary: Double) {
-        self.name = name
-        self.age = age
+    init(schoolName: String, internSalary: Double) {
         self.schoolName = schoolName
         self.internSalary = internSalary
     }

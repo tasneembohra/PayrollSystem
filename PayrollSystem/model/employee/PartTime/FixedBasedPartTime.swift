@@ -8,16 +8,12 @@
 
 import Foundation
 
-class FixedBasedPartTime: PartTime, Employee, IPrintable {
-    var name: String
-    var age: Int
+class FixedBasedPartTime: PartTime, EmployeementDetail {
     var rate: Double
     var hoursWorked: Double
     private var fixedAmmount: Int
     
-    init(name: String, age: Int, rate: Double, hoursWorked: Double, fixedAmmount: Int){
-        self.name = name
-        self.age = age
+    init(rate: Double, hoursWorked: Double, fixedAmmount: Int) {
         self.rate = rate
         self.hoursWorked = hoursWorked
         self.fixedAmmount = fixedAmmount

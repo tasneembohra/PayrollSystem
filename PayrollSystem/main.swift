@@ -8,5 +8,5 @@
 
 import Foundation
 
-JSONUtility.readEmplyeeData(fromFile: "employees")
-FileUtility.printObjectToFile()
+let employee = JSONUtility.readEmplyeeData(fromFile: "employees")
+FileUtility.printObjectToFile(employee)

@@ -9,7 +9,7 @@
 import Foundation
 
 class FileUtility {
-    static func printObjectToFile() {
+    static func printObjectToFile(employee:Employee) {
         let str = "Super long string here"
         let filename = getDocumentsDirectory().appendingPathComponent("employee_output.txt")
         print(filename)

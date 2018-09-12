@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol PartTime: Employee {
+protocol PartTime: EmployeementDetail {
     
     var rate: Double {get set}
     var hoursWorked: Double {get set}

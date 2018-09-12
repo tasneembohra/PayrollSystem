@@ -8,16 +8,12 @@
 
 import Foundation
 
-class CommissionBasedPartTime: PartTime, Employee, IPrintable {
-    var name: String
-    var age: Int
+class CommissionBasedPartTime: PartTime, EmployeementDetail {
     var rate: Double
     var hoursWorked: Double
     private var commissionPerc: Double
     
-    init(name: String, age: Int, rate: Double, hoursWorked: Double, commissionPerc: Double){
-        self.name = name
-        self.age = age
+    init(rate: Double, hoursWorked: Double, commissionPerc: Double){
         self.rate = rate
         self.hoursWorked = hoursWorked
         self.commissionPerc = commissionPerc

@@ -8,9 +8,7 @@
 
 import Foundation
 
-protocol Employee {
-    var name: String {get set}
-    var age: Int {get set}
+protocol EmployeementDetail: IPrintable {
     func calcBirthYear(age: Int) -> Int
     func calcEarning() -> Double
 }

@@ -8,16 +8,12 @@
 
 import Foundation
 
-class FullTime: Employee, IPrintable {
+class FullTime: EmployeementDetail {
     
-    var name: String
-    var age: Int
     private var salary: Double
     private var bonus: Double
     
-    init(name: String, age: Int, salary: Double, bonus: Double) {
-        self.name = name
-        self.age = age
+    init(salary: Double, bonus: Double) {
         self.salary = salary
         self.bonus = bonus
     }

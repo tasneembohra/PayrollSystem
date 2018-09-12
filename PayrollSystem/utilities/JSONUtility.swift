@@ -8,7 +8,8 @@
 
 import Foundation
 class JSONUtility {
-    static func readEmplyeeData(fromFile:String) -> Employee? { // Return employee object
+    static func readEmplyeeData(fromFile:String) -> Employee {
+        let employeeObj = Employee()
         if let path  = Bundle.main.path(forResource: fromFile, ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
@@ -16,11 +17,12 @@ class JSONUtility {
                 if let emplyees = jsonResult as? [Any] {
                     for employee in emplyees {
                         if let dict = employee as? Dictionary<String, Any> {
-                            var employee: Employee
                             let name = dict["name"] as? String ?? "NA"
                             let age = dict["age"] as? Int
+                            employeeObj.name = name
+                            employeeObj.age = age
                             let employement = dict["employement"] as? Dictionary<String, Any>
-                            if (employement == nil) { return nil }
+                            if (employement == nil) { return employeeObj }
                             // Initialize emplyoment object
                             switch (employement?["type"] as! String) {
                             case "parttime":
@@ -29,11 +31,11 @@ class JSONUtility {
                                     let rate = employement!["rate"] as! Double
                                     let hours = employement!["hours_worked"] as! Double
                                     let fixedAmount = employement!["fixed_amount"] as! Int
-                                    employee = FixedBasedPartTime(name: name, age: age, rate: rate, hoursWorked: hours, fixedAmmount: fixedAmount)
+                                    employeeObj.employeementDetail = FixedBasedPartTime(rate: rate, hoursWorked: hours, fixedAmmount: fixedAmount)
                                 } else if (subType == "commission") {
                                         
                                     } else {
-                                        return nil
+                                        return employeeObj
                                     }
                                 case "fulltime": print("fulltime")
                                 case "intern": print("intern")
@@ -55,6 +57,7 @@ class JSONUtility {
             } catch {
                 print("Error while reading")
             }
+            return employeeObj
         }
     }
 }
