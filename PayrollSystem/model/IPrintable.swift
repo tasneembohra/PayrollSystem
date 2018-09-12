@@ -1,5 +1,5 @@
 //
-//  Vehicle.swift
+//  IPrintable.swift
 //  PayrollSystem
 //
 //  Created by Tasneem on 10/09/18.
@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol IPrintable {
+    func printMyData() -> String
+}
