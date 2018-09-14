@@ -8,27 +8,33 @@
 
 import Foundation
 
-class Intern: EmployeementDetail {
-    private var schoolName: String
-    private var internSalary: Double
+class Intern: Employee {
+   
+    var schoolName: String?
+    var internSalary: Double?
     
-    init(schoolName: String, internSalary: Double) {
+    override init() {
+        super.init()
+        self.schoolName = ""
+        self.internSalary = 0.0
+    }
+    
+    init(name: String, age: Int, vehicle: Vehicle?, schoolName: String, internSalary: Double) {
+        super.init(name: name, age: age, vehicle: vehicle)
         self.schoolName = schoolName
         self.internSalary = internSalary
     }
     
-    func printMyData() -> String {
-        
-    }
     
     func calcEarning() -> Double {
-        return internSalary
+        return internSalary!
     }
     
-    func calcBirthYear(age: Int) -> Int {
-        let date = Date()
-        let year = Calendar.current.component(.year, from: date)
-        return year - age
+    
+    override func printMyData() {
+        super.printMyData()
+        print("School Name: \(schoolName!)")
+        print("Salary: \(calcEarning())")
     }
     
 }

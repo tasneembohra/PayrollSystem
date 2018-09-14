@@ -3,15 +3,13 @@
   "name": "John",
   "birth_year": 1996,
   "vehicle":
-  [
    {
    "type" : "car",
    "model" : "Honda SUV",
    "color" : "black",
    "registration_no" : "CF123W",
    "seater": 4
-   }
-   ],
+   },
   "employement" : {
   "type" : "parttime",
   "sub_type" : "fixed",
@@ -25,15 +23,13 @@
   "name": "Cindy",
   "birth_year": 1996,
   "vehicle":
-  [
    {
    "type" : "motorcycle",
    "model" : "XYZ",
    "color" : "black",
    "registration_no" : "CF123W",
    "stroller": true
-   }
-   ],
+   },
   "employement" : {
   "type" : "parttime",
   "sub_type" : "commission",
@@ -46,15 +42,13 @@
   "name": "Cindy2",
   "birth_year": 1996,
   "vehicle":
-  [
    {
    "type" : "motorcycle",
    "model" : "XYZ",
    "color" : "black",
    "registration_no" : "CF123W",
    "stroller": true
-   }
-   ],
+   },
   "employement" : {
   "type" : "intern",
   "earning": 10000,

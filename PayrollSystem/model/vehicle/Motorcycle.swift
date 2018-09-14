@@ -8,26 +8,30 @@
 
 import Foundation
 
-class Motorcycle: Vehicle, IPrintable {
+class Motorcycle: Vehicle {
 
-    var brand: String
-    var yearOfProduction: Int
-    var engineType: String
-    var color: String
-    var registrationNumber: String
-    private var hasBasket: Bool
+    var hasBasket: Bool?
     
-    init(hasBasket: Bool, brand: String, yearOfProduction: Int, engineType: String, color: String, registrationNumber: String) {
-        self.hasBasket = hasBasket
-        self.brand = brand
-        self.yearOfProduction = yearOfProduction
-        self.engineType = engineType
-        self.color = color
-        self.registrationNumber = registrationNumber
+    override init() {
+        super.init()
+        self.hasBasket = false
     }
     
-    func printMyData() -> String {
-        <#code#>
+    init(brand: String, yearOfProduction: Int, engineType: String, color: String, registrationNumber: String, hasBasket: Bool) {
+        super.init(brand: brand, yearOfProduction: yearOfProduction, engineType: engineType, color: color, registrationNumber: registrationNumber)
+        self.hasBasket = hasBasket
+    }
+    
+    override func printMyData() {
+        super.printMyData()
+        if hasBasket == true
+        {
+            print("Motorcycle has a Basket")
+        }
+        else
+        {
+            print("Motorcycle has NOT a Basket")
+        }
     }
     
 }

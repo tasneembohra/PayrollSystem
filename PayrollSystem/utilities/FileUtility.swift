@@ -8,7 +8,7 @@
 
 import Foundation
 
-class FileUtility {
+/*class FileUtility {
     static func printObjectToFile(employee:Employee) {
         let str = "Super long string here"
         let filename = getDocumentsDirectory().appendingPathComponent("employee_output.txt")
@@ -25,3 +25,4 @@ class FileUtility {
         return paths[0]
     }
 }
+*/

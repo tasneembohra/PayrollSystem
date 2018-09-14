@@ -8,12 +8,36 @@
 
 import Foundation
 
-protocol Vehicle {
+class Vehicle: IPrintable {
     
-    var brand: String {get set}
-    var yearOfProduction: Int {get set}
-    var engineType: String {get set}
-    var color: String {get set}
-    var registrationNumber: String {get set}
+    var brand: String?
+    var yearOfProduction: Int?
+    var engineType: String?
+    var color: String?
+    var registrationNumber: String?
+    
+    init() {
+        self.brand = ""
+        self.yearOfProduction = 0
+        self.engineType = ""
+        self.color = ""
+        self.registrationNumber = ""
+    }
+    
+    init(brand: String, yearOfProduction: Int, engineType: String, color: String, registrationNumber: String) {
+        self.brand = brand
+        self.yearOfProduction = yearOfProduction
+        self.engineType = engineType
+        self.color = color
+        self.registrationNumber = registrationNumber
+    }
+    
+    func printMyData() {
+        print("Brand: \(brand!)")
+        print("Year Of Production: \(yearOfProduction!)")
+        print("Engine Type: \(engineType!)")
+        print("Color: \(color!)")
+        print("Plate: \(registrationNumber!)")
+    }
 }
 

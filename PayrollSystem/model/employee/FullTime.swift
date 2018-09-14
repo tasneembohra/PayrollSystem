@@ -8,28 +8,31 @@
 
 import Foundation
 
-class FullTime: EmployeementDetail {
+class FullTime: Employee {
     
-    private var salary: Double
-    private var bonus: Double
+    var salary: Double?
+    var bonus: Double?
     
-    init(salary: Double, bonus: Double) {
+    override init() {
+        super.init()
+        self.salary = 0.0
+        self.bonus = 0.0
+    }
+    
+    init(name: String, age: Int, vehicle: Vehicle?, salary: Double, bonus: Double) {
+        super.init(name: name, age: age, vehicle: vehicle)
         self.salary = salary
         self.bonus = bonus
     }
     
-    func printMyData() -> String {
-        
-    }
     
     func calcEarning() -> Double {
-        return salary + bonus
+        return salary! + bonus!
     }
     
-    func calcBirthYear(age: Int) -> Int {
-        let date = Date()
-        let year = Calendar.current.component(.year, from: date)
-        return year - age
-    }
     
+    override func printMyData() {
+        super.printMyData()
+        print("Salary: \(calcEarning())")
+    }
 }

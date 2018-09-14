@@ -8,28 +8,29 @@
 
 import Foundation
 
-class FixedBasedPartTime: PartTime, EmployeementDetail {
-    var rate: Double
-    var hoursWorked: Double
-    private var fixedAmmount: Int
+class FixedBasedPartTime: PartTime {
+
+    var fixedAmmount: Int?
     
-    init(rate: Double, hoursWorked: Double, fixedAmmount: Int) {
-        self.rate = rate
-        self.hoursWorked = hoursWorked
+    override init() {
+        super.init()
+        self.fixedAmmount = 0
+    }
+    
+    init(name: String, age: Int, vehicle: Vehicle?, rate: Double, hoursWorked: Double, fixedAmmount: Int){
+        super.init(name: name, age: age, vehicle: vehicle, rate: rate, hoursWorked: hoursWorked)
         self.fixedAmmount = fixedAmmount
     }
     
-    func printMyData() -> String {
+    func calcEarning() -> Double {
+        return (rate! * hoursWorked!) + Double(fixedAmmount!)
+    }
+    
+    override func printMyData() {
+        super.printMyData()
+        print("Salary: \(calcEarning())")
         
     }
     
-    func calcEarning() -> Double {
-        return (rate * hoursWorked) + Double(fixedAmmount)
-    }
     
-    func calcBirthYear(age: Int) -> Int {
-        let date = Date()
-        let year = Calendar.current.component(.year, from: date)
-        return year - age
-    }
 }

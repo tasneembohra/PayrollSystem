@@ -10,7 +10,6 @@
 		2B31651F21472ED000A86537 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B31651E21472ED000A86537 /* Vehicle.swift */; };
 		2B31652121472EE100A86537 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B31652021472EE100A86537 /* Car.swift */; };
 		2B31652321472EF000A86537 /* Motorcycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B31652221472EF000A86537 /* Motorcycle.swift */; };
-		2B31652621472F7C00A86537 /* EmployeementDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B31652521472F7C00A86537 /* EmployeementDetail.swift */; };
 		2B31652821472F9000A86537 /* PartTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B31652721472F9000A86537 /* PartTime.swift */; };
 		2B31652A21472FC900A86537 /* FullTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B31652921472FC900A86537 /* FullTime.swift */; };
 		2B31652C21472FEA00A86537 /* Intern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B31652B21472FEA00A86537 /* Intern.swift */; };
@@ -39,7 +38,6 @@
 		2B31651E21472ED000A86537 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		2B31652021472EE100A86537 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		2B31652221472EF000A86537 /* Motorcycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motorcycle.swift; sourceTree = "<group>"; };
-		2B31652521472F7C00A86537 /* EmployeementDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeementDetail.swift; sourceTree = "<group>"; };
 		2B31652721472F9000A86537 /* PartTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTime.swift; sourceTree = "<group>"; };
 		2B31652921472FC900A86537 /* FullTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTime.swift; sourceTree = "<group>"; };
 		2B31652B21472FEA00A86537 /* Intern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intern.swift; sourceTree = "<group>"; };
@@ -78,8 +76,8 @@
 		2B31652421472F5400A86537 /* employee */ = {
 			isa = PBXGroup;
 			children = (
+				966D81A92148985A00C1480F /* Employee.swift */,
 				2B93A478214846F30068A32D /* PartTime */,
-				2B31652521472F7C00A86537 /* EmployeementDetail.swift */,
 				2B31652921472FC900A86537 /* FullTime.swift */,
 				2B31652B21472FEA00A86537 /* Intern.swift */,
 			);
@@ -129,7 +127,6 @@
 				2B31652421472F5400A86537 /* employee */,
 				2B31651D21472E7900A86537 /* vehicle */,
 				966D81A321474E2A00C1480F /* IPrintable.swift */,
-				966D81A92148985A00C1480F /* Employee.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -202,7 +199,6 @@
 			files = (
 				2B31651F21472ED000A86537 /* Vehicle.swift in Sources */,
 				2B31652C21472FEA00A86537 /* Intern.swift in Sources */,
-				2B31652621472F7C00A86537 /* EmployeementDetail.swift in Sources */,
 				966D81AA2148985A00C1480F /* Employee.swift in Sources */,
 				2B31652321472EF000A86537 /* Motorcycle.swift in Sources */,
 				2B31652A21472FC900A86537 /* FullTime.swift in Sources */,
