@@ -10,34 +10,34 @@ import Foundation
 
 class Vehicle: IPrintable {
     
-    var brand: String?
+    var make: String?
     var yearOfProduction: Int?
     var engineType: String?
     var color: String?
-    var registrationNumber: String?
+    var plate: String?
     
     init() {
-        self.brand = ""
+        self.make = ""
         self.yearOfProduction = 0
         self.engineType = ""
         self.color = ""
-        self.registrationNumber = ""
+        self.plate = ""
     }
     
-    init(brand: String, yearOfProduction: Int, engineType: String, color: String, registrationNumber: String) {
-        self.brand = brand
+    init(make: String, yearOfProduction: Int, engineType: String, color: String, plate: String) {
+        self.make = make
         self.yearOfProduction = yearOfProduction
         self.engineType = engineType
         self.color = color
-        self.registrationNumber = registrationNumber
+        self.plate = plate
     }
     
     func printMyData() {
-        print("Brand: \(brand!)")
-        print("Year Of Production: \(yearOfProduction!)")
-        print("Engine Type: \(engineType!)")
-        print("Color: \(color!)")
-        print("Plate: \(registrationNumber!)")
+        print("  -Make: \(make!)")
+        print("  -Plate: \(plate!)")
+        print("  -Year Of Production: \(yearOfProduction!)")
+        print("  -Engine Type: \(engineType!)")
+        print("  -Color: \(color!)")
     }
 }
 

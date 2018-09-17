@@ -20,7 +20,7 @@ class FullTime: Employee {
     }
     
     init(name: String, age: Int, vehicle: Vehicle?, salary: Double, bonus: Double) {
-        super.init(name: name, age: age, vehicle: vehicle)
+        super.init(name: name, age: age, vehicle: vehicle, employeeType: "FT")
         self.salary = salary
         self.bonus = bonus
     }
@@ -33,6 +33,10 @@ class FullTime: Employee {
     
     override func printMyData() {
         super.printMyData()
-        print("Salary: \(calcEarning())")
+        print("Employee is Full Time")
+        print(" -Salary: \(salary!)")
+        print(" -Bonus: \(bonus!)")
+        print(" -Earnings: \(calcEarning())(\(salary!) + \(bonus!))")
+        print("*******************************************")
     }
 }

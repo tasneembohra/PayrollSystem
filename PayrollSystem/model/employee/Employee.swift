@@ -12,16 +12,19 @@ class  Employee: IPrintable {
     var name: String?
     var age: Int?
     var vehicle: Vehicle?  // connect Emplyee and Vehicle, Employee might has a vehicle
+    var employeeType: String? // for casting
     
     init() {
         self.name = ""
         self.age = 0
         self.vehicle = nil
+        self.employeeType = "NONE"
     }
     
-    init(name: String, age: Int, vehicle: Vehicle?){
+    init(name: String, age: Int, vehicle: Vehicle?, employeeType: String){
         self.name =  name
         self.age = age
+        self.employeeType = employeeType
         if let v = vehicle {
             self.vehicle = v
         }
@@ -36,12 +39,11 @@ class  Employee: IPrintable {
         return year - age!
     }
     
-    func calcEarnings() -> Double {
+    /*func calcEarnings() -> Double {
         return 1000.0
-    }
+    }*/
     
     func printMyData() {
-        print("*******************************************")
         print("Name: \(self.name!)")
         print("Year of Birth: \(calcBirthYear())")
         if let v = vehicle
@@ -49,7 +51,7 @@ class  Employee: IPrintable {
             v.printMyData()
         }
         else {
-            print("***No Vehicle available")
+            print("Employee has no Vehicle registered")
         }
     }
     

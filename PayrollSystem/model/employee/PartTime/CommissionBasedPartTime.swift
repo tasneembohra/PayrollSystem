@@ -17,19 +17,22 @@ class CommissionBasedPartTime: PartTime {
         self.commissionPerc = 0.0
     }
     
-    init(name: String, age: Int, vehicle: Vehicle?, rate: Double, hoursWorked: Double, commissionPerc: Double){
-        super.init(name: name, age: age, vehicle: vehicle, rate: rate, hoursWorked: hoursWorked)
+    init(name: String, age: Int, vehicle: Vehicle?, rate: Double, hoursWorked: Double, commissionPerc: Double) {
+        super.init(name: name, age: age, vehicle: vehicle, employeeType: "PTC", rate: rate, hoursWorked: hoursWorked)
         self.commissionPerc = commissionPerc
     }
     
     func calcEarning() -> Double {
-        let fixedSalary = rate! * hoursWorked!
-        return fixedSalary + fixedSalary * (commissionPerc! / 100)
+        return (rate! * hoursWorked!) + (rate! * hoursWorked!) * (commissionPerc! / 100)
     }
     
     override func printMyData() {
         super.printMyData()
-        print("Salary: \(calcEarning())")
-        
+        print("Employee is PartTime / Commissioned")
+        print(" -Rate: \(rate!)")
+        print(" -Hours Worked: \(hoursWorked!)")
+        print(" -Commision: \(commissionPerc!)%")
+        print(" -Earnings: \(calcEarning()) (\(rate! * hoursWorked!) + \(commissionPerc!)% of \(rate! * hoursWorked!)")
+        print("*******************************************")
     }
 }

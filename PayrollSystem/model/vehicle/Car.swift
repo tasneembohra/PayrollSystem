@@ -17,14 +17,15 @@ class Car: Vehicle {
         self.numberOfSeats = 0
     }
     
-    init(brand: String, yearOfProduction: Int, engineType: String, color: String, registrationNumber: String, numberOfSeats: Int) {
-        super.init(brand: brand, yearOfProduction: yearOfProduction, engineType: engineType, color: color, registrationNumber: registrationNumber)
+    init(make: String, yearOfProduction: Int, engineType: String, color: String, plate: String, numberOfSeats: Int) {
+        super.init(make: make, yearOfProduction: yearOfProduction, engineType: engineType, color: color, plate: plate)
         self.numberOfSeats = numberOfSeats
     }
     
     override func printMyData() {
+        print("Employee has a Car")
         super.printMyData()
-        print("Number Of Seats: \(self.numberOfSeats!)")
+        print(" -Number Of Seats: \(self.numberOfSeats!)")
     }
     
 }

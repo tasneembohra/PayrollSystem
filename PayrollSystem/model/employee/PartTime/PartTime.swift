@@ -19,8 +19,8 @@ class PartTime: Employee {
         self.hoursWorked = 0.0
     }
     
-    init(name: String, age: Int, vehicle: Vehicle?, rate: Double, hoursWorked: Double) {
-        super.init(name: name, age: age, vehicle: vehicle)
+    init(name: String, age: Int, vehicle: Vehicle?, employeeType: String, rate: Double, hoursWorked: Double) {
+        super.init(name: name, age: age, vehicle: vehicle, employeeType: employeeType)
         self.rate = rate
         self.hoursWorked = hoursWorked
     }

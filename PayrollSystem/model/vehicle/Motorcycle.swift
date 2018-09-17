@@ -17,20 +17,21 @@ class Motorcycle: Vehicle {
         self.hasBasket = false
     }
     
-    init(brand: String, yearOfProduction: Int, engineType: String, color: String, registrationNumber: String, hasBasket: Bool) {
-        super.init(brand: brand, yearOfProduction: yearOfProduction, engineType: engineType, color: color, registrationNumber: registrationNumber)
+    init(make: String, yearOfProduction: Int, engineType: String, color: String, plate: String, hasBasket: Bool) {
+        super.init(make: make, yearOfProduction: yearOfProduction, engineType: engineType, color: color, plate: plate)
         self.hasBasket = hasBasket
     }
     
     override func printMyData() {
+        print("Employee has a Motorcycle")
         super.printMyData()
         if hasBasket == true
         {
-            print("Motorcycle has a Basket")
+            print("  -Motorcycle has a Basket.")
         }
         else
         {
-            print("Motorcycle has NOT a Basket")
+            print("  -Motorcycle has NOT a Basket.")
         }
     }
     

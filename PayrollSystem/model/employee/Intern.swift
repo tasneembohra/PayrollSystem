@@ -20,7 +20,7 @@ class Intern: Employee {
     }
     
     init(name: String, age: Int, vehicle: Vehicle?, schoolName: String, internSalary: Double) {
-        super.init(name: name, age: age, vehicle: vehicle)
+        super.init(name: name, age: age, vehicle: vehicle, employeeType: "INT")
         self.schoolName = schoolName
         self.internSalary = internSalary
     }
@@ -33,8 +33,10 @@ class Intern: Employee {
     
     override func printMyData() {
         super.printMyData()
-        print("School Name: \(schoolName!)")
-        print("Salary: \(calcEarning())")
+        print("Employee is Intern")
+        print(" -School Name: \(schoolName!)")
+        print(" -Salary: \(calcEarning())")
+        print("*******************************************")
     }
     
 }
