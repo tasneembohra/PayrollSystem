@@ -8,32 +8,35 @@
 
 import Foundation
 
-class Intern: Employee, IPrintable {
+class Intern: Employee {
+   
+    var schoolName: String?
+    var internSalary: Double?
     
-    var name: String
-    var age: Int
-    private var schoolName: String
-    private var internSalary: Double
+    override init() {
+        super.init()
+        self.schoolName = ""
+        self.internSalary = 0.0
+    }
     
-    init(name: String, age: Int, schoolName: String, internSalary: Double) {
-        self.name = name
-        self.age = age
+    init(name: String, age: Int, vehicle: Vehicle?, schoolName: String, internSalary: Double) {
+        super.init(name: name, age: age, vehicle: vehicle, employeeType: "INT")
         self.schoolName = schoolName
         self.internSalary = internSalary
     }
     
-    func printMyData() -> String {
-        
-    }
     
     func calcEarning() -> Double {
-        return internSalary
+        return internSalary!
     }
     
-    func calcBirthYear(age: Int) -> Int {
-        let date = Date()
-        let year = Calendar.current.component(.year, from: date)
-        return year - age
+    
+    override func printMyData() {
+        super.printMyData()
+        print("Employee is Intern")
+        print(" -School Name: \(schoolName!)")
+        print(" -Salary: \(calcEarning())")
+        print("*******************************************")
     }
     
 }

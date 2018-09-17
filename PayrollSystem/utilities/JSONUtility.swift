@@ -6,9 +6,10 @@
 //  Copyright © 2018 Lambton College. All rights reserved.
 //
 
-import Foundation
+/*import Foundation
 class JSONUtility {
-    static func readEmplyeeData(fromFile:String) {
+    static func readEmplyeeData(fromFile:String) -> Employee {
+        let employeeObj = Employee()
         if let path  = Bundle.main.path(forResource: fromFile, ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
@@ -16,13 +17,63 @@ class JSONUtility {
                 if let emplyees = jsonResult as? [Any] {
                     for employee in emplyees {
                         if let dict = employee as? Dictionary<String, Any> {
-                            print(dict["name"] as? String)
+                            let name = dict["name"] as? String ?? "NA"
+                            let age = dict["age"] as? Int
+                            employeeObj.name = name
+                            employeeObj.age = age
+                            let employement = dict["employement"] as? Dictionary<String, Any>
+                            if (employement == nil) { return employeeObj }
+                            // Initialize emplyoment object
+                            switch (employement?["type"] as! String) {
+                            case "parttime":
+                                let subType = employement!["sub_type"] as! String
+                                if (subType == "fixed") {
+                                    let rate = employement!["rate"] as! Double
+                                    let hours = employement!["hours_worked"] as! Double
+                                    let fixedAmount = employement!["fixed_amount"] as! Int
+                                    employeeObj.employeementDetail = FixedBasedPartTime(rate: rate, hoursWorked: hours, fixedAmmount: fixedAmount)
+                                } else if (subType == "commission") {
+                                    let rate = employement!["rate"] as! Double
+                                    let hours = employement!["hours_worked"] as! Double
+                                    let commissionPerc = employement!["commision"] as! Double
+                                    employeeObj.employeementDetail = CommissionBasedPartTime(rate: rate, hoursWorked: hours, commissionPerc: commissionPerc)
+                                    }
+                                //fulltime worker
+                                case "fulltime":
+                                let salary = employement!["salary"] as! Double
+                                let bonus = employement!["bonus"] as! Double
+                                employeeObj.employeementDetail = FullTime(salary: salary, bonus: bonus)
+                                //intern worker
+                                case "intern":
+                                let schoolName = employement!["school_name"] as! String
+                                let internSalary = employement!["earning"] as! Double
+                                employeeObj.employeementDetail = Intern(schoolName: schoolName, internSalary: internSalary)
+                                default: print("")
+                            }
+                            let vehicle = dict["vehicle"] as? Dictionary<String, Any>
+                            if (vehicle != nil) {
+                                let brand = dict["model"] as? String
+                                let yearOfProduction = dict["year"]
+                                engineType: String
+                                color: String
+                                registrationNumber: String
+                                let type = vehicle?["type"] as? String
+                                if (type == "motorcycle") {
+                                    // Initialize with motorcycle
+                                    
+                                } else if (type == "car") {
+                                    // Initializing with car
+                                }
+                            }
+                            print(dict)
                         }
                     }
                 }
             } catch {
                 print("Error while reading")
             }
+            return employeeObj
         }
     }
 }
+*/

@@ -8,34 +8,31 @@
 
 import Foundation
 
-class CommissionBasedPartTime: PartTime, Employee, IPrintable {
-    var name: String
-    var age: Int
-    var rate: Double
-    var hoursWorked: Double
-    private var commissionPerc: Double
+class CommissionBasedPartTime: PartTime {
+
+    var commissionPerc: Double?
     
-    init(name: String, age: Int, rate: Double, hoursWorked: Double, commissionPerc: Double){
-        self.name = name
-        self.age = age
-        self.rate = rate
-        self.hoursWorked = hoursWorked
+    override init() {
+        super.init()
+        self.commissionPerc = 0.0
+    }
+    
+    init(name: String, age: Int, vehicle: Vehicle?, rate: Double, hoursWorked: Double, commissionPerc: Double) {
+        super.init(name: name, age: age, vehicle: vehicle, employeeType: "PTC", rate: rate, hoursWorked: hoursWorked)
         self.commissionPerc = commissionPerc
     }
     
-    func printMyData() -> String {
-        
-    }
-    
     func calcEarning() -> Double {
-        let fixedSalary = rate * hoursWorked
-        return fixedSalary + fixedSalary * (commissionPerc / 100)
+        return (rate! * hoursWorked!) + (rate! * hoursWorked!) * (commissionPerc! / 100)
     }
     
-    func calcBirthYear(age: Int) -> Int {
-        let date = Date()
-        let year = Calendar.current.component(.year, from: date)
-        return year - age
+    override func printMyData() {
+        super.printMyData()
+        print("Employee is PartTime / Commissioned")
+        print(" -Rate: \(rate!)")
+        print(" -Hours Worked: \(hoursWorked!)")
+        print(" -Commision: \(commissionPerc!)%")
+        print(" -Earnings: \(calcEarning()) (\(rate! * hoursWorked!) + \(commissionPerc!)% of \(rate! * hoursWorked!)")
+        print("*******************************************")
     }
-    
 }

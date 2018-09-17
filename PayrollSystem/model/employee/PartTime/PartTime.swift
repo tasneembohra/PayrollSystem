@@ -8,9 +8,25 @@
 
 import Foundation
 
-protocol PartTime: Employee {
+class PartTime: Employee {
     
-    var rate: Double {get set}
-    var hoursWorked: Double {get set}
+    var rate: Double?
+    var hoursWorked: Double?
+    
+    override init() {
+        super.init()
+        self.rate = 0.0
+        self.hoursWorked = 0.0
+    }
+    
+    init(name: String, age: Int, vehicle: Vehicle?, employeeType: String, rate: Double, hoursWorked: Double) {
+        super.init(name: name, age: age, vehicle: vehicle, employeeType: employeeType)
+        self.rate = rate
+        self.hoursWorked = hoursWorked
+    }
+    
+    override func printMyData() {
+        super.printMyData()
+    }
     
 }
