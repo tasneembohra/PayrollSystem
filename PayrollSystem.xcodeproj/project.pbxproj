@@ -50,6 +50,7 @@
 		966D81A321474E2A00C1480F /* IPrintable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPrintable.swift; sourceTree = "<group>"; };
 		966D81A7214896CD00C1480F /* FileUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtility.swift; sourceTree = "<group>"; };
 		966D81A92148985A00C1480F /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		9B3ABA7A21506490006D8561 /* employees.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = employees.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +118,7 @@
 				966D819C21472B5C00C1480F /* utilities */,
 				966D819B21472B5100C1480F /* model */,
 				966D8194214729DD00C1480F /* main.swift */,
+				9B3ABA7A21506490006D8561 /* employees.json */,
 			);
 			path = PayrollSystem;
 			sourceTree = "<group>";

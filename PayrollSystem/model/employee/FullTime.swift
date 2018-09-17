@@ -23,6 +23,7 @@ class FullTime: Employee {
         super.init(name: name, age: age, vehicle: vehicle, employeeType: "FT")
         self.salary = salary
         self.bonus = bonus
+        self.totalEarnings = calcEarning()
     }
     
     
@@ -36,7 +37,7 @@ class FullTime: Employee {
         print("Employee is Full Time")
         print(" -Salary: \(salary!)")
         print(" -Bonus: \(bonus!)")
-        print(" -Earnings: \(calcEarning())(\(salary!) + \(bonus!))")
+        print(" -Earnings: \(String(describing: self.totalEarnings))(\(salary!) + \(bonus!)))")
         print("*******************************************")
     }
 }

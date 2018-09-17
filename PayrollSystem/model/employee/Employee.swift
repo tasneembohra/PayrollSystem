@@ -12,7 +12,8 @@ class  Employee: IPrintable {
     var name: String?
     var age: Int?
     var vehicle: Vehicle?  // connect Emplyee and Vehicle, Employee might has a vehicle
-    var employeeType: String? // for casting
+    var employeeType : String? // for casting
+    var totalEarnings: Double? = 0.0
     
     init() {
         self.name = ""
@@ -34,14 +35,13 @@ class  Employee: IPrintable {
     }
     
     func calcBirthYear() -> Int {
-        let date = Date()
-        let year = Calendar.current.component(.year, from: date)
-        return year - age!
+        if age! > 0 {
+            let date = Date()
+            let year = Calendar.current.component(.year, from: date)
+            return year - age!
+        }
+        return 0
     }
-    
-    /*func calcEarnings() -> Double {
-        return 1000.0
-    }*/
     
     func printMyData() {
         print("Name: \(self.name!)")
