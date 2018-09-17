@@ -23,6 +23,7 @@ class Intern: Employee {
         super.init(name: name, age: age, vehicle: vehicle, employeeType: "INT")
         self.schoolName = schoolName
         self.internSalary = internSalary
+         self.totalEarnings = calcEarning()
     }
     
     
@@ -35,7 +36,7 @@ class Intern: Employee {
         super.printMyData()
         print("Employee is Intern")
         print(" -School Name: \(schoolName!)")
-        print(" -Salary: \(calcEarning())")
+        print(" -Salary: \(self.totalEarnings!)")
         print("*******************************************")
     }
     

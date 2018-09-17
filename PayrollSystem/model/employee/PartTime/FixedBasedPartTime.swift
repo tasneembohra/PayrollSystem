@@ -20,6 +20,7 @@ class FixedBasedPartTime: PartTime {
     init(name: String, age: Int, vehicle: Vehicle?, rate: Double, hoursWorked: Double, fixedAmmount: Int){
         super.init(name: name, age: age, vehicle: vehicle, employeeType: "PTF", rate: rate, hoursWorked: hoursWorked)
         self.fixedAmmount = fixedAmmount
+        self.totalEarnings = calcEarning()
     }
     
     func calcEarning() -> Double {
@@ -32,7 +33,7 @@ class FixedBasedPartTime: PartTime {
         print(" -Rate: \(rate!)")
         print(" -Hours Worked: \(hoursWorked!)")
         print(" -Fixed Ammount: \(fixedAmmount!)")
-        print(" -Earnings: \(calcEarning())(\(rate! * hoursWorked!) + \(fixedAmmount!)")
+        print(" -Earnings: \(self.totalEarnings!) (\(rate! * hoursWorked!) + \(fixedAmmount!))")
         print("*******************************************")
     }
 

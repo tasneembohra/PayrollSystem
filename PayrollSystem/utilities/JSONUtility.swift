@@ -6,10 +6,10 @@
 //  Copyright © 2018 Lambton College. All rights reserved.
 //
 
-/*import Foundation
+import Foundation
 class JSONUtility {
-    static func readEmplyeeData(fromFile:String) -> Employee {
-        let employeeObj = Employee()
+    static func readEmplyeeData(fromFile:String) -> [Employee] {
+        var employeeList:[Employee] = []
         if let path  = Bundle.main.path(forResource: fromFile, ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
@@ -17,63 +17,74 @@ class JSONUtility {
                 if let emplyees = jsonResult as? [Any] {
                     for employee in emplyees {
                         if let dict = employee as? Dictionary<String, Any> {
+                            // Getting employee name and age
                             let name = dict["name"] as? String ?? "NA"
-                            let age = dict["age"] as? Int
-                            employeeObj.name = name
-                            employeeObj.age = age
-                            let employement = dict["employement"] as? Dictionary<String, Any>
-                            if (employement == nil) { return employeeObj }
-                            // Initialize emplyoment object
-                            switch (employement?["type"] as! String) {
-                            case "parttime":
-                                let subType = employement!["sub_type"] as! String
-                                if (subType == "fixed") {
-                                    let rate = employement!["rate"] as! Double
-                                    let hours = employement!["hours_worked"] as! Double
-                                    let fixedAmount = employement!["fixed_amount"] as! Int
-                                    employeeObj.employeementDetail = FixedBasedPartTime(rate: rate, hoursWorked: hours, fixedAmmount: fixedAmount)
-                                } else if (subType == "commission") {
-                                    let rate = employement!["rate"] as! Double
-                                    let hours = employement!["hours_worked"] as! Double
-                                    let commissionPerc = employement!["commision"] as! Double
-                                    employeeObj.employeementDetail = CommissionBasedPartTime(rate: rate, hoursWorked: hours, commissionPerc: commissionPerc)
-                                    }
-                                //fulltime worker
-                                case "fulltime":
-                                let salary = employement!["salary"] as! Double
-                                let bonus = employement!["bonus"] as! Double
-                                employeeObj.employeementDetail = FullTime(salary: salary, bonus: bonus)
-                                //intern worker
-                                case "intern":
-                                let schoolName = employement!["school_name"] as! String
-                                let internSalary = employement!["earning"] as! Double
-                                employeeObj.employeementDetail = Intern(schoolName: schoolName, internSalary: internSalary)
-                                default: print("")
-                            }
-                            let vehicle = dict["vehicle"] as? Dictionary<String, Any>
-                            if (vehicle != nil) {
-                                let brand = dict["model"] as? String
-                                let yearOfProduction = dict["year"]
-                                engineType: String
-                                color: String
-                                registrationNumber: String
-                                let type = vehicle?["type"] as? String
+                            let age = dict["age"] as? Int ?? 0
+                            
+                            // Getting employee vehicle
+                            var vehicleObj:Vehicle?
+                            let vehicleDic = dict["vehicle"] as? Dictionary<String, Any>
+                            if (vehicleDic != nil) {
+                                let brand = vehicleDic!["model"] as? String ?? "NA"
+                                let yearOfProduction = vehicleDic!["year"] as? Int ?? 0
+                                let engineType = vehicleDic!["engine_type"] as? String ?? "NA"
+                                let color = vehicleDic!["color"] as? String ?? "NA"
+                                let registrationNumber = vehicleDic!["registration_no"] as? String ?? "NA"
+                                let stroller = vehicleDic!["stroller"] as? Bool ?? false
+                                let seat = vehicleDic!["seater"] as? Int ?? 0
+                                let type = vehicleDic?["type"] as? String ?? "NA"
                                 if (type == "motorcycle") {
                                     // Initialize with motorcycle
-                                    
+                                    vehicleObj = Motorcycle(make: brand, yearOfProduction: yearOfProduction, engineType: engineType, color: color, plate: registrationNumber, hasBasket: stroller)
                                 } else if (type == "car") {
                                     // Initializing with car
+                                    vehicleObj = Car(make: brand, yearOfProduction: yearOfProduction, engineType: engineType, color: color, plate: registrationNumber, numberOfSeats: seat)
                                 }
                             }
-                            print(dict)
+                            
+                            if (vehicleObj == nil) {
+                                // Initialize default
+                                vehicleObj = Vehicle()
+                            }
+                            
+                            // Getting employee employement details
+                            let employeeObj:Employee
+                            let employement = dict["employement"] as? Dictionary<String, Any>
+                            if (employement == nil) { return employeeList }
+                            // Initialize emplyoment object
+                            switch (employement?["type"] as! String) {
+                                case "parttime-fixed":
+                                    // Part time fixed
+                                    let rate = employement!["rate"] as? Double ?? 0.0
+                                    let hours = employement!["hours_worked"] as? Double ?? 0.0
+                                    let fixedAmount = employement!["fixed_amount"] as? Int ?? 0
+                                    employeeObj = FixedBasedPartTime(name: name, age: age, vehicle: vehicleObj, rate: rate, hoursWorked: hours, fixedAmmount: fixedAmount)
+                                case "parttime-commission":
+                                    // Part time commission
+                                    let rate = employement!["rate"] as? Double ?? 0.0
+                                    let hours = employement!["hours_worked"] as? Double ?? 0.0
+                                    let commissionPerc = employement!["commision"] as? Double ?? 0.0
+                                    employeeObj = CommissionBasedPartTime(name: name, age: age, vehicle: vehicleObj, rate: rate, hoursWorked: hours, commissionPerc: commissionPerc)
+                                //fulltime worker
+                                case "fulltime":
+                                    let salary = employement!["salary"] as? Double ?? 0.0
+                                    let bonus = employement!["bonus"] as? Double ?? 0.0
+                                    employeeObj = FullTime(name: name, age: age, vehicle: vehicleObj, salary: salary, bonus: bonus)
+                                //intern worker
+                                case "intern":
+                                    let schoolName = employement!["school_name"] as? String ?? "NA"
+                                    let internSalary = employement!["earning"] as? Double ?? 0.0
+                                    employeeObj = Intern(name: name, age: age, vehicle: vehicleObj, schoolName: schoolName, internSalary: internSalary)
+                                default: continue
+                            }
+                            employeeList.append(employeeObj)
                         }
                     }
                 }
             } catch {
                 print("Error while reading")
             }
-            return employeeObj
         }
+        return employeeList
     }
 }
-*/
