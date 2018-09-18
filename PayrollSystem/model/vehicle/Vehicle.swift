@@ -10,11 +10,11 @@ import Foundation
 
 class Vehicle: IPrintable {
     
-    var make: String?
-    var yearOfProduction: Int?
-    var engineType: String?
-    var color: String?
-    var plate: String?
+    private var make: String?
+    private var yearOfProduction: Int?
+    private var engineType: String?
+    private var color: String?
+    private var plate: String?
     
     init() {
         self.make = ""

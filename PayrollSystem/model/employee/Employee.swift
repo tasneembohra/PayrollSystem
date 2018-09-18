@@ -9,23 +9,19 @@
 import Foundation
 
 class  Employee: IPrintable {
-    var name: String?
-    var age: Int?
-    var vehicle: Vehicle?  // connect Emplyee and Vehicle, Employee might has a vehicle
-    var employeeType : String? // for casting
-    var totalEarnings: Double? = 0.0
+    private(set) var name: String?
+    private var age: Int?
+    private var vehicle: Vehicle?  // connect Emplyee and Vehicle, Employee might has a vehicle
     
     init() {
         self.name = ""
         self.age = 0
         self.vehicle = nil
-        self.employeeType = "NONE"
     }
     
     init(name: String, age: Int, vehicle: Vehicle?, employeeType: String){
-        self.name =  name
+        self.name = name
         self.age = age
-        self.employeeType = employeeType
         if let v = vehicle {
             self.vehicle = v
         }
@@ -41,6 +37,11 @@ class  Employee: IPrintable {
             return year - age!
         }
         return 0
+    }
+    
+    // Must be overriden by the child classes
+    func calcEarning() -> Double {
+        return 0.0
     }
     
     func printMyData() -> String {

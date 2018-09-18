@@ -10,7 +10,7 @@ import Foundation
 
 class Car: Vehicle {
     
-    var numberOfSeats: Int?
+    private var numberOfSeats: Int?
     
     override init() {
         super.init()

@@ -10,7 +10,7 @@ import Foundation
 
 class Motorcycle: Vehicle {
 
-    var hasBasket: Bool?
+    private var hasBasket: Bool?
     
     override init() {
         super.init()

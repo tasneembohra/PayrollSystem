@@ -16,10 +16,9 @@ var output = ""
 
 for employee in employees {
     output += employee.printMyData()
-    totalPayroll += employee.totalEarnings!
+    totalPayroll += employee.calcEarning()
 }
 
 output += "\n\nTOTAL PAYROLL: \(totalPayroll) Canadian Dollars"
 print(output)
-
 FileUtility.printData(output, toFile: "employees_output.txt")

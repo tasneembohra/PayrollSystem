@@ -10,8 +10,8 @@ import Foundation
 
 class PartTime: Employee {
     
-    var rate: Double?
-    var hoursWorked: Double?
+    private(set) var rate: Double?
+    private(set) var hoursWorked: Double?
     
     override init() {
         super.init()

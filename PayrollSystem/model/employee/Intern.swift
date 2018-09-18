@@ -10,8 +10,8 @@ import Foundation
 
 class Intern: Employee {
    
-    var schoolName: String?
-    var internSalary: Double?
+    private var schoolName: String?
+    private var internSalary: Double?
     
     override init() {
         super.init()
@@ -23,16 +23,15 @@ class Intern: Employee {
         super.init(name: name, age: age, vehicle: vehicle, employeeType: "INT")
         self.schoolName = schoolName
         self.internSalary = internSalary
-        self.totalEarnings = calcEarning()
     }
     
     
-    func calcEarning() -> Double {
+    override func calcEarning() -> Double {
         return internSalary!
     }
     
     override func printMyData() -> String {
-        return super.printMyData() + "\nEmployee is Intern\n" + "\t-School Name: \(schoolName!)\n" + "\t-Salary: \(self.totalEarnings!)\n" + "***************************************************"
+        return super.printMyData() + "\nEmployee is Intern\n" + "\t-School Name: \(schoolName!)\n" + "\t-Salary: \(calcEarning())\n" + "***************************************************"
     }
     
 }
