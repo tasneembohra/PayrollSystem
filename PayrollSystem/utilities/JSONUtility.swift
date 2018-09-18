@@ -81,7 +81,7 @@ class JSONUtility {
                 print("Error while reading")
             }
         } else {
-            print("Copy employee.json and move to \(Bundle.main)")
+            print("Copy employees.json and move to \(Bundle.main.bundlePath)")
         }
         return employeeList
     }
