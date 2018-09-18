@@ -10,7 +10,7 @@ import Foundation
 
 class CommissionBasedPartTime: PartTime {
 
-    var commissionPerc: Double?
+    private var commissionPerc: Double?
     
     override init() {
         super.init()
@@ -20,20 +20,13 @@ class CommissionBasedPartTime: PartTime {
     init(name: String, age: Int, vehicle: Vehicle?, rate: Double, hoursWorked: Double, commissionPerc: Double) {
         super.init(name: name, age: age, vehicle: vehicle, employeeType: "PTC", rate: rate, hoursWorked: hoursWorked)
         self.commissionPerc = commissionPerc
-        self.totalEarnings = calcEarning()
     }
     
-    func calcEarning() -> Double {
+    override func calcEarning() -> Double {
         return (rate! * hoursWorked!) + (rate! * hoursWorked!) * (commissionPerc! / 100)
     }
     
-    override func printMyData() {
-        super.printMyData()
-        print("Employee is PartTime / Commissioned")
-        print(" -Rate: \(rate!)")
-        print(" -Hours Worked: \(hoursWorked!)")
-        print(" -Commision: \(commissionPerc!)%")
-        print(" -Earnings: \(self.totalEarnings!) (\(rate! * hoursWorked!) + \(commissionPerc!)% of \(rate! * hoursWorked!))")
-        print("*******************************************")
+    override func printMyData() -> String {
+        return super.printMyData() + "\nEmployee is PartTime / Commissioned\n" + "\t-Rate: \(rate!)\n" + "\t-Hours Worked: \(hoursWorked!)\n" + "\t-Commision: \(commissionPerc!)%\n" + "\t-Earnings: \(calcEarning()) (\(rate! * hoursWorked!) + \(commissionPerc!)% of \(rate! * hoursWorked!))\n" + "***************************************************"
     }
 }

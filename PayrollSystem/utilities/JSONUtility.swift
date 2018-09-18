@@ -11,6 +11,7 @@ class JSONUtility {
     static func readEmplyeeData(fromFile:String) -> [Employee] {
         var employeeList:[Employee] = []
         if let path  = Bundle.main.path(forResource: fromFile, ofType: "json") {
+            print("Reading data from \(path)")
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
@@ -40,11 +41,6 @@ class JSONUtility {
                                     // Initializing with car
                                     vehicleObj = Car(make: brand, yearOfProduction: yearOfProduction, engineType: engineType, color: color, plate: registrationNumber, numberOfSeats: seat)
                                 }
-                            }
-                            
-                            if (vehicleObj == nil) {
-                                // Initialize default
-                                vehicleObj = Vehicle()
                             }
                             
                             // Getting employee employement details
@@ -84,6 +80,8 @@ class JSONUtility {
             } catch {
                 print("Error while reading")
             }
+        } else {
+            print("Copy employees.json and move to \(Bundle.main.bundlePath)")
         }
         return employeeList
     }

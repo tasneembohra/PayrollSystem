@@ -10,7 +10,7 @@ import Foundation
 
 class Car: Vehicle {
     
-    var numberOfSeats: Int?
+    private var numberOfSeats: Int?
     
     override init() {
         super.init()
@@ -22,10 +22,8 @@ class Car: Vehicle {
         self.numberOfSeats = numberOfSeats
     }
     
-    override func printMyData() {
-        print("Employee has a Car")
-        super.printMyData()
-        print(" -Number Of Seats: \(self.numberOfSeats!)")
+    override func printMyData()  -> String {
+        return "\nEmployee has a Car\n" + super.printMyData() + "\n\t-Number Of Seats: \(self.numberOfSeats!)"
     }
     
 }
