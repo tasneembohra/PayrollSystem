@@ -15,6 +15,7 @@
 		2B31652C21472FEA00A86537 /* Intern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B31652B21472FEA00A86537 /* Intern.swift */; };
 		2B31652E21472FFE00A86537 /* CommissionBasedPartTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B31652D21472FFE00A86537 /* CommissionBasedPartTime.swift */; };
 		2B3165302147300D00A86537 /* FixedBasedPartTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B31652F2147300D00A86537 /* FixedBasedPartTime.swift */; };
+		2BAF94AF215197E200112454 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAF94AE215197E200112454 /* Extensions.swift */; };
 		966D8195214729DD00C1480F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D8194214729DD00C1480F /* main.swift */; };
 		966D819E21472B7500C1480F /* JSONUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D819D21472B7500C1480F /* JSONUtility.swift */; };
 		966D81A421474E2A00C1480F /* IPrintable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966D81A321474E2A00C1480F /* IPrintable.swift */; };
@@ -43,6 +44,7 @@
 		2B31652B21472FEA00A86537 /* Intern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intern.swift; sourceTree = "<group>"; };
 		2B31652D21472FFE00A86537 /* CommissionBasedPartTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommissionBasedPartTime.swift; sourceTree = "<group>"; };
 		2B31652F2147300D00A86537 /* FixedBasedPartTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedBasedPartTime.swift; sourceTree = "<group>"; };
+		2BAF94AE215197E200112454 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		966D8191214729DD00C1480F /* PayrollSystem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PayrollSystem; sourceTree = BUILT_PRODUCTS_DIR; };
 		966D8194214729DD00C1480F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		966D819D21472B7500C1480F /* JSONUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUtility.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				966D81A12147371400C1480F /* employees.json */,
+				2BAF94AE215197E200112454 /* Extensions.swift */,
 				966D819C21472B5C00C1480F /* utilities */,
 				966D819B21472B5100C1480F /* model */,
 				966D8194214729DD00C1480F /* main.swift */,
@@ -212,6 +215,7 @@
 				2B31652121472EE100A86537 /* Car.swift in Sources */,
 				966D81A8214896CD00C1480F /* FileUtility.swift in Sources */,
 				966D8195214729DD00C1480F /* main.swift in Sources */,
+				2BAF94AF215197E200112454 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
