@@ -19,8 +19,8 @@ class FullTime: Employee {
         self.bonus = 0.0
     }
     
-    init(name: String, age: Int, vehicle: Vehicle?, salary: Double, bonus: Double) {
-        super.init(name: name, age: age, vehicle: vehicle, employeeType: "FT")
+    init(name: String, age: Int, email: String, vehicle: Vehicle?, salary: Double, bonus: Double) {
+        super.init(name: name, age: age, email: email, vehicle: vehicle)
         self.salary = salary
         self.bonus = bonus
     }

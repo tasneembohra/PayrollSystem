@@ -11,6 +11,7 @@ import Foundation
 class  Employee: IPrintable {
     private(set) var name: String?
     private var age: Int?
+    private var email: String?
     private var vehicle: Vehicle?  // connect Emplyee and Vehicle, Employee might has a vehicle
     
     init() {
@@ -19,9 +20,10 @@ class  Employee: IPrintable {
         self.vehicle = nil
     }
     
-    init(name: String, age: Int, vehicle: Vehicle?, employeeType: String){
+    init(name: String, age: Int, email:String?, vehicle: Vehicle?){
         self.name = name
         self.age = age
+        self.email = email
         if let v = vehicle {
             self.vehicle = v
         }
@@ -47,6 +49,7 @@ class  Employee: IPrintable {
     func printMyData() -> String {
         var output = "\nName: \(self.name!)"
         + "\nYear of Birth: \(calcBirthYear())"
+        + "\nEmail: \(self.email!)"
         
         if let v = vehicle {
             output += v.printMyData()

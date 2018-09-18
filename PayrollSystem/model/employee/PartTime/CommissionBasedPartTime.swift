@@ -17,8 +17,8 @@ class CommissionBasedPartTime: PartTime {
         self.commissionPerc = 0.0
     }
     
-    init(name: String, age: Int, vehicle: Vehicle?, rate: Double, hoursWorked: Double, commissionPerc: Double) {
-        super.init(name: name, age: age, vehicle: vehicle, employeeType: "PTC", rate: rate, hoursWorked: hoursWorked)
+    init(name: String, age: Int, email: String, vehicle: Vehicle?, rate: Double, hoursWorked: Double, commissionPerc: Double) {
+        super.init(name: name, age: age, email: email, vehicle: vehicle, rate: rate, hoursWorked: hoursWorked)
         self.commissionPerc = commissionPerc
     }
     

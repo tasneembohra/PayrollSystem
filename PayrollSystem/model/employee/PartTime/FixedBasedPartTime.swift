@@ -10,20 +10,20 @@ import Foundation
 
 class FixedBasedPartTime: PartTime {
 
-    private var fixedAmmount: Int?
+    private var fixedAmmount: Double?
     
     override init() {
         super.init()
         self.fixedAmmount = 0
     }
     
-    init(name: String, age: Int, vehicle: Vehicle?, rate: Double, hoursWorked: Double, fixedAmmount: Int){
-        super.init(name: name, age: age, vehicle: vehicle, employeeType: "PTF", rate: rate, hoursWorked: hoursWorked)
+    init(name: String, age: Int, email: String, vehicle: Vehicle?, rate: Double, hoursWorked: Double, fixedAmmount: Double){
+        super.init(name: name, age: age, email: email, vehicle: vehicle, rate: rate, hoursWorked: hoursWorked)
         self.fixedAmmount = fixedAmmount
     }
     
     override func calcEarning() -> Double {
-        return (rate! * hoursWorked!) + Double(fixedAmmount!)
+        return (rate! * hoursWorked!) + fixedAmmount!
     }
     
     override func printMyData() -> String {

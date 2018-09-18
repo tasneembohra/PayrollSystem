@@ -19,8 +19,8 @@ class Intern: Employee {
         self.internSalary = 0.0
     }
     
-    init(name: String, age: Int, vehicle: Vehicle?, schoolName: String, internSalary: Double) {
-        super.init(name: name, age: age, vehicle: vehicle, employeeType: "INT")
+    init(name: String, age: Int, email: String, vehicle: Vehicle?, schoolName: String, internSalary: Double) {
+        super.init(name: name, age: age, email: email, vehicle: vehicle)
         self.schoolName = schoolName
         self.internSalary = internSalary
     }
