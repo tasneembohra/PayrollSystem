@@ -27,13 +27,7 @@ class CommissionBasedPartTime: PartTime {
         return (rate! * hoursWorked!) + (rate! * hoursWorked!) * (commissionPerc! / 100)
     }
     
-    override func printMyData() {
-        super.printMyData()
-        print("Employee is PartTime / Commissioned")
-        print(" -Rate: \(rate!)")
-        print(" -Hours Worked: \(hoursWorked!)")
-        print(" -Commision: \(commissionPerc!)%")
-        print(" -Earnings: \(self.totalEarnings!) (\(rate! * hoursWorked!) + \(commissionPerc!)% of \(rate! * hoursWorked!))")
-        print("*******************************************")
+    override func printMyData() -> String {
+        return super.printMyData() + "\nEmployee is PartTime / Commissioned\n" + "\t-Rate: \(rate!)\n" + "\t-Hours Worked: \(hoursWorked!)\n" + "\t-Commision: \(commissionPerc!)%\n" + "\t-Earnings: \(self.totalEarnings!) (\(rate! * hoursWorked!) + \(commissionPerc!)% of \(rate! * hoursWorked!))\n" + "***************************************************"
     }
 }

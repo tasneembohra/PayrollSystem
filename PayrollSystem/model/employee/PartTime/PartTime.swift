@@ -25,8 +25,8 @@ class PartTime: Employee {
         self.hoursWorked = hoursWorked
     }
     
-    override func printMyData() {
-        super.printMyData()
+    override func printMyData() -> String {
+        return super.printMyData()
     }
     
 }

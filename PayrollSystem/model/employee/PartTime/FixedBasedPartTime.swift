@@ -27,14 +27,8 @@ class FixedBasedPartTime: PartTime {
         return (rate! * hoursWorked!) + Double(fixedAmmount!)
     }
     
-    override func printMyData() {
-        super.printMyData()
-        print("Employee is PartTime / Fixed Amt")
-        print(" -Rate: \(rate!)")
-        print(" -Hours Worked: \(hoursWorked!)")
-        print(" -Fixed Ammount: \(fixedAmmount!)")
-        print(" -Earnings: \(self.totalEarnings!) (\(rate! * hoursWorked!) + \(fixedAmmount!))")
-        print("*******************************************")
+    override func printMyData() -> String {
+       return super.printMyData() + "\nEmployee is PartTime / Fixed Amt\n" + "\t-Rate: \(rate!)\n" + "\t-Hours Worked: \(hoursWorked!)\n" + "\t-Fixed Ammount: \(fixedAmmount!)\n" + "\t-Earnings: \(self.totalEarnings!) (\(rate! * hoursWorked!) + \(fixedAmmount!))\n" + "***************************************************"
     }
 
     

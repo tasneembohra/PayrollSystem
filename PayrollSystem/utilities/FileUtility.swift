@@ -8,13 +8,12 @@
 
 import Foundation
 
-/*class FileUtility {
-    static func printObjectToFile(employee:Employee) {
-        let str = "Super long string here"
-        let filename = getDocumentsDirectory().appendingPathComponent("employee_output.txt")
-        print(filename)
+class FileUtility {
+    static func printData(_ data:String, toFile: String) {
+        let filename = getDocumentsDirectory().appendingPathComponent(toFile)
         do {
-            try str.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
+            try data.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
+            print("All employee details have been written at file : \(filename)")
         } catch {
             // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
         }
@@ -25,4 +24,3 @@ import Foundation
         return paths[0]
     }
 }
-*/

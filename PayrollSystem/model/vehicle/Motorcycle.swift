@@ -22,17 +22,9 @@ class Motorcycle: Vehicle {
         self.hasBasket = hasBasket
     }
     
-    override func printMyData() {
-        print("Employee has a Motorcycle")
-        super.printMyData()
-        if hasBasket == true
-        {
-            print("  -Motorcycle has a Basket.")
-        }
-        else
-        {
-            print("  -Motorcycle has NOT a Basket.")
-        }
+    override func printMyData() -> String {
+        var output = "\nEmployee has a Motorcycle\n" + super.printMyData() + "\n" ; if hasBasket == true { output += " \t-Motorcycle has a Basket." } else { output += " \t-Motorcycle has NOT a Basket."}
+        return output
     }
     
 }

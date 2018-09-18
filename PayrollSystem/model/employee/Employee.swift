@@ -43,16 +43,16 @@ class  Employee: IPrintable {
         return 0
     }
     
-    func printMyData() {
-        print("Name: \(self.name!)")
-        print("Year of Birth: \(calcBirthYear())")
-        if let v = vehicle
-        {
-            v.printMyData()
+    func printMyData() -> String {
+        var output = "\nName: \(self.name!)"
+        + "\nYear of Birth: \(calcBirthYear())"
+        
+        if let v = vehicle {
+            output += v.printMyData()
+        } else {
+            output += "\nEmployee has no Vehicle registered"
         }
-        else {
-            print("Employee has no Vehicle registered")
-        }
+        return output
     }
     
 }

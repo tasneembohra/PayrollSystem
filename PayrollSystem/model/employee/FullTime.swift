@@ -32,12 +32,7 @@ class FullTime: Employee {
     }
     
     
-    override func printMyData() {
-        super.printMyData()
-        print("Employee is Full Time")
-        print(" -Salary: \(salary!)")
-        print(" -Bonus: \(bonus!)")
-        print(" -Earnings: \(String(describing: self.totalEarnings))(\(salary!) + \(bonus!)))")
-        print("*******************************************")
+    override func printMyData() -> String {
+        return super.printMyData() + "\nEmployee is Full Time\n" + "\t-Salary: \(salary!)\n" + "\t-Bonus: \(bonus!)\n" + "\t-Earnings: \(String(describing: self.totalEarnings))(\(salary!) + \(bonus!)))\n" + "***************************************************"
     }
 }

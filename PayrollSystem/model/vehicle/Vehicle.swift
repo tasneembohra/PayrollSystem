@@ -32,12 +32,8 @@ class Vehicle: IPrintable {
         self.plate = plate
     }
     
-    func printMyData() {
-        print("  -Make: \(make!)")
-        print("  -Plate: \(plate!)")
-        print("  -Year Of Production: \(yearOfProduction!)")
-        print("  -Engine Type: \(engineType!)")
-        print("  -Color: \(color!)")
+    func printMyData() -> String {
+        return "\t-Make: \(make!)" + "\n" + "\t-Plate: \(plate!)" + "\n" + "\t-Year Of Production: \(yearOfProduction!)" + "\n" + "\t-Engine Type: \(engineType!)" + "\n" + "\t-Color: \(color!)"
     }
 }
 
