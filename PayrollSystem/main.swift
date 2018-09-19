@@ -18,7 +18,7 @@ if (employees.count > 0) {
         output += employee.printMyData()
         totalPayroll += employee.calcEarning()
     }
-    output += "\n\nTOTAL PAYROLL: \(totalPayroll) Canadian Dollars"
+    output += "\n\nTOTAL PAYROLL: \(totalPayroll.Formatting())"
     print(output)
     FileUtility.printData(output, toFile: "employees_output.txt")
 } else {

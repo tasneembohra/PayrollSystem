@@ -27,7 +27,7 @@ class FixedBasedPartTime: PartTime {
     }
     
     override func printMyData() -> String {
-       return super.printMyData() + "\nEmployee is PartTime / Fixed Amt\n" + "\t-Rate: \(rate!.CAD)\n" + "\t-Hours Worked: \(hoursWorked!)\n" + "\t-Fixed Ammount: \(fixedAmmount!.CAD)\n" + "\t-Earnings: \(calcEarning().CAD) (\((rate! * hoursWorked!).CAD) + \(fixedAmmount!.CAD))\n" + "***************************************************"
+       return super.printMyData() + "\nEmployee is PartTime / Fixed Amt\n" + "\t-Rate: \(rate!.Formatting())\n" + "\t-Hours Worked: \(hoursWorked!.hours())\n" + "\t-Fixed Ammount: \(fixedAmmount!.Formatting())\n" + "\t-Earnings: \(calcEarning().Formatting()) (\((rate! * hoursWorked!).Formatting()) + \(fixedAmmount!.Formatting()))\n" + "***************************************************"
     }
 
     
