@@ -23,7 +23,7 @@ class Car: Vehicle {
     }
     
     override func printMyData()  -> String {
-        return "\nEmployee has a Car\n" + super.printMyData() + "\n\t-Number Of Seats: \(self.numberOfSeats!)"
+        return "\n\nEmployee has a Car\n" + super.printMyData() + "\n\t* Number Of Seats: \(self.numberOfSeats!)"
     }
     
 }

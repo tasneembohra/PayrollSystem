@@ -32,6 +32,9 @@ class FullTime: Employee {
     
     
     override func printMyData() -> String {
-        return super.printMyData() + "\nEmployee is Full Time\n" + "\t-Salary: \(salary!.Formatting())\n" + "\t-Bonus: \(bonus!.Formatting())\n" + "\t-Earnings: \(calcEarning().Formatting())(\(salary!.Formatting()) + \(bonus!.Formatting())))\n" + "***************************************************"
+        return super.printMyData() + "\n\nEmployee is Full Time\n"
+            + "\t* Salary: \(salary!.Formatting())\n" +
+            "\t* Bonus: \(bonus!.Formatting())\n" +
+            "\t* Earnings: \(calcEarning().Formatting())(\(salary!.Formatting()) + \(bonus!.Formatting())))\n" + "***************************************************************"
     }
 }

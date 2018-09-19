@@ -31,7 +31,10 @@ class Intern: Employee {
     }
     
     override func printMyData() -> String {
-        return super.printMyData() + "\nEmployee is Intern\n" + "\t-School Name: \(schoolName!)\n" + "\t-Salary: \(calcEarning().Formatting())\n" + "***************************************************"
+        return super.printMyData() + "\n\nEmployee is Intern\n" +
+            "\t* School Name: \(schoolName!)\n" +
+            "\t* Salary: \(calcEarning().Formatting())\n" +
+        "***************************************************************"
     }
     
 }

@@ -9,29 +9,25 @@
 import Foundation
 
 extension Double {
-    
-    func Formatting() -> String
-    {
+
+    func Formatting() -> String {
         let format = NumberFormatter()
         format.currencyCode = "CAD"
         format.numberStyle = .currency
         if let formatValue = format.string(from: self as NSNumber) {
             return "\(formatValue)"
+        } else {
+            return "\(self)"
         }
-        return "\(self)"
     }
     
-    var hours: String
-    {
+    var hours: String {
         let format = NumberFormatter()
         format.numberStyle = .decimal
         if let formatValue = format.string(from: self as NSNumber) {
-            if self > 1{
-                return "\(formatValue) hours"
-            } else {
-                return "\(formatValue) hour"
-            }
+            return self > 1 ? "\(formatValue) Hrs" : "\(formatValue) Hr"
+        } else {
+            return "\(self)"
         }
-        return "\(self)"
     }
 }

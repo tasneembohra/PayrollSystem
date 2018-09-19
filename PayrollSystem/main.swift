@@ -18,9 +18,10 @@ if (employees.count > 0) {
         output += employee.printMyData()
         totalPayroll += employee.calcEarning()
     }
-    output += "\n\nTOTAL PAYROLL: \(totalPayroll.Formatting())"
+    output += "\n\nTOTAL PAYROLL: \(totalPayroll.Formatting())\n"
     print(output)
     FileUtility.printData(output, toFile: "employees_output.txt")
+    print()
 } else {
     print("\nEmployee list is empty.\n")
 }
