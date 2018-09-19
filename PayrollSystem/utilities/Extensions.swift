@@ -21,7 +21,7 @@ extension Double {
         return "\(self)"
     }
     
-    func hours() -> String
+    var hours: String
     {
         let format = NumberFormatter()
         format.numberStyle = .decimal
