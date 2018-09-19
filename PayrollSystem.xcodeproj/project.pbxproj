@@ -55,6 +55,7 @@
 		966D81A92148985A00C1480F /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		9B3ABA7A21506490006D8561 /* employees.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = employees.json; sourceTree = "<group>"; };
 		9BC5ED662151ADA400BD0960 /* DataValidations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataValidations.swift; sourceTree = "<group>"; };
+		9BFE86D42153018B004BD01C /* sample_employees_output.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = sample_employees_output.txt; path = ../../sample_employees_output.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +119,7 @@
 		966D8193214729DD00C1480F /* PayrollSystem */ = {
 			isa = PBXGroup;
 			children = (
+				9BFE86D42153018B004BD01C /* sample_employees_output.txt */,
 				966D81A12147371400C1480F /* employees.json */,
 				966D819C21472B5C00C1480F /* utilities */,
 				966D819B21472B5100C1480F /* model */,

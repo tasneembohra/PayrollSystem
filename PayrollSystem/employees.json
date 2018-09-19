@@ -1,53 +1,69 @@
-[
- {
- "name":"Johan",
- "age": 30,
- "email": "tasneem@sds.com",
- "vehicle":{
- "type":"car",
- "model":"Honda SUV",
- "color":"black",
- "registration_no":"CF123W",
- "seater":4
- },
- "employement":{
- "type":"parttime-fixed",
- "rate": 40.0,
- "hours_worked":10.0,
- "fixed_amount":40.0
- }
- },
- {
- "name":"Cindy",
- "age": 20,
- "vehicle":{
- "type":"motorcycle",
- "model":"XYZ",
- "color":"black",
- "registration_no":"CF123W",
- "stroller":true
- },
- "employement":{
- "type":"parttime-commission",
- "rate":30.0,
- "hours_worked":10.0,
- "commision":40.0
- }
- },
- {
- "name":"Cindy2",
- "age": 20,
- "vehicle":{
- "type":"motorcycle",
- "model":"XYZ",
- "color":"black",
- "registration_no":"CF123W",
- "stroller":true
- },
- "employement":{
- "type":"intern",
- "earning":10000,
- "school_name":"Lamton"
- }
- }
- ]
+ [
+  {
+  "name":"Tasneem Bohra",
+  "age": 30,
+  "email": "tasneem@something.com",
+  "vehicle":{
+  "type":"car",
+  "model":"Honda SUV",
+  "color":"black",
+  "registration_no":"CF123W",
+  "seater":4
+  },
+  "employement":{
+  "type":"parttime-fixed",
+  "rate": 40.0,
+  "hours_worked":10.0,
+  "fixed_amount":40.0
+  }
+  },
+  {
+  "name":"Daian",
+  "age": 20,
+  "vehicle":{
+  "type":"motorcycle",
+  "model":"CVZ",
+  "color":"black",
+  "registration_no":"CF123W",
+  "stroller":true
+  },
+  "employement":{
+  "type":"parttime-commission",
+  "rate":30.0,
+  "hours_worked":1,
+  "commision":40.0
+  }
+  },
+  {
+  "name":"Prudhvi",
+  "age": 20,
+  "vehicle":{
+  "type":"motorcycle",
+  "model":"Yamaha",
+  "color":"black",
+  "registration_no":"CF123W",
+  "stroller":true
+  },
+  "employement":{
+  "type":"intern",
+  "earning":10000,
+  "school_name":"Lambton College"
+  }
+  },
+  {
+  "name":"Pritesh Patel",
+  "age": 20,
+  "vehicle":{
+  "type":"motorcycle",
+  "model":"Yamaha",
+  "color":"black",
+  "registration_no":"CF123W",
+  "stroller":false
+  },
+  "employement":{
+  "type":"fulltime",
+  "salary":100000.0,
+  "bonus":2000.0
+  }
+  }
+  ]
